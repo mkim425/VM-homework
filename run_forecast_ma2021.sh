@@ -24,10 +24,13 @@ VM_HOMEWORK_DIR="/data/VM-homework"
 cd "${VM_HOMEWORK_DIR}"
 git pull
 
-Rscript forecast_MA2021.R > result
+OUT_FILE=/tmp/run-forecast_MA2021-out.txt
+
+Rscript forecast_MA2021.R >${OUT_FILE} 2>&1
 
 TODAY=$(date)
 git commit -m "Changes committed: $TODAY"
 git push
 
 slack_message "done"
+
