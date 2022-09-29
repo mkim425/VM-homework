@@ -7,7 +7,7 @@
 
 # set environment variables - per https://stackoverflow.com/questions/19331497/set-environment-variables-from-file-of-key-value-pairs
 set -o allexport
-source ~/.env
+source ~/.env-tmp
 set +o allexport
 
 # load slack functions - per https://stackoverflow.com/questions/10822790/can-i-call-a-function-of-a-shell-script-from-another-shell-script/42101141#42101141
