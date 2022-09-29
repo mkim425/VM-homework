@@ -29,7 +29,7 @@ Rscript forecast_MA2021.R >${OUT_FILE} 2>&1
 
 TODAY=$(date)
 git add ${OUT_FILE}
-git commit -m "Changes committed: $TODAY"
+git commit -m "Changes committed: ${TODAY}"
 git push
 
 slack_message "done"
